@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display Properties</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            display: block;
+        }
+        .box1 {
+            background-color: red;
+            display: inline-block;
+        }
+        .box2 {
+            background-color: green;
+            display: inline-block;
+        }
+        .box3 {
+            background-color: blue;
+        }
+
+        .navigation li {
+            display: inline-block;
+        }
+
+        .navigation {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .navigation li a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .navigation li a:hover {
+            text-decoration: underline;
+        }
+
+        .navigation li a:link {
+            color: red;
+        }
+
+        .navigation li a:visited {
+            color:darkblue;
+        }
+
+        .navigation li a:active {
+            color:olive;
+        }
+
+        header {
+            background-color: blanchedalmond;
+            padding: 10px;
+        }
+
+        .parent li:first-child {
+            color: forestgreen;
+            font-size: 24px;
+        }
+
+        .parent li:nth-child(2) {
+            color:firebrick;
+            font-size: 32px;
+        }
+
+        .parent li:last-child {
+            color: tomato;
+            font-size: 42px;
+        }
+
+
+        input[type="text"] {
+            color:aqua;
+        }
+
+        input[type="text"]:focus {
+            outline: 2px solid blue;
+        }
+
+        a:focus {
+            outline: 1px solid green;
+        }
+
+        .box4 {
+            border: 1px solid black;
+            padding: 10px 5px 15px 20px;
+            margin: 5px 10px 15px 20px;
+            background-color: cornsilk;
+
+
+            /* border-width: 1px 2px 3px 4px; 
+            border-style: solid dashed dotted double; 
+            border-top: 1px solid black;
+            border-right: 2px dashed green;
+            border-bottom: 1px solid blue;
+            border-left: 3px groove red; */
+            
+        }
+
+        .box5 {
+            display: none;
+        }
+
+        .box4:hover ~ .box5 {
+            display: block;
+        }
+
+        .box6 {
+            border: 2px solid black;
+            padding: 30px;
+            position: relative;
+            height: 500px;
+        }
+
+        .box7 {
+            background-color: yellow;
+            padding: 20px;
+            position: absolute;
+            bottom: 48%;
+            left: 9%;
+            width: 170px;
+            height: 100px;
+        }
+
+        .box8 img {
+            width: 150px;
+            height: 150px;
+        }
+
+        .box8 {
+            position: absolute;
+            width: 200px;
+            bottom: 50%;
+            left: 10%;
+        }
+
+        .box9 {
+            margin-top: 20px;
+            padding: 60px;
+            height: 500px;
+            position: relative;
+        }
+
+        .box9::before {
+            background-image: url(https://images.unsplash.com/photo-1656624407940-a67e5e872cfd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=736&q=80);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            opacity: 50%;
+        } 
+        .box9::after {
+            content:"the after content";
+        }
+
+        .box10::before {
+            content: "The before content";
+            color: red;
+        }
+        .box10::after {
+            content:"The after content";
+            color: blue;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <h1>CSS Display Properties</h1>
+
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    <br><br>
+
+    <div class="box4">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia, autem?
+    </div>
+    
+    <div class="box5">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, natus.
+    </div>
+
+    <div class="box6">
+        <div class="box7">
+            
+        </div>
+        <div class="box8">
+            <img src="https://placeimg.com/640/480/animals" alt="">
+        </div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit repudiandae ratione dolore, nisi laboriosam placeat cum, adipisci reprehenderit sunt iste numquam consectetur fugiat saepe quas ex natus. Magni, officiis ad!
+    </div>
+
+    <div class="box9">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus odio assumenda sequi illo error repellat quibusdam? Eius tenetur consequuntur, saepe sed debitis, molestiae facilis dolorem cum exercitationem quas eum nihil!
+    </div>
+
+    <div class="box10">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    </div>
+
+    <br><br>
+
+    <input type="text">
+    <input type="password">
+    <header>
+        <ul class="navigation">
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">About Us</a>
+            </li>
+            <li>
+                <a href="contact">Contact Us</a>
+            </li>
+        </ul>
+    </header>
+    <ul class="parent">
+        <li>First Child</li>
+        <li>5th Child</li>
+        <li>2nd Child</li>
+        <li>3rd Child</li>
+        <li>4th Child</li>
+    </ul>
+
+    <ul class="parent">
+        <li>First and Last</li>
+    </ul>
+
+</body>
+
+</html>
