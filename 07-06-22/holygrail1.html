@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holy Grail 1 Layout</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        header, 
+        footer {
+            height: 100px;
+            background-color:yellowgreen;
+            padding: 10px;
+        }
+        .container {
+            display: flex;
+            height: 500px;
+        }
+        nav {
+            background-color: blanchedalmond;
+            width: 20%;
+            padding: 10px;
+        }
+        article {
+            background-color: white;
+            width: 60%;
+            padding: 10px;
+        }
+        aside {
+            background-color: violet;
+            width: 20%;
+            padding: 10px;
+        }
+        body {
+            margin: 0;
+            height: 100%;
+        }
+        html {
+            height: 100%;
+        }
+        .d-none {
+            display: none;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-direction: column;
+        }
+        .flex {
+            display: flex;
+            gap: 10px;
+        }
+        .field {
+            margin-bottom: 5px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .field label {
+            margin-right: 10px;
+        }
+        .field input {
+            padding: 5px;
+        }
+        .submit-btn {
+            border: 0;
+            padding: 10px;
+            background-color:tomato;
+        }
+        .submit-btn:hover {
+            cursor: pointer;
+        }
+        .btn-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .flex-item {
+            width: 50%;
+            padding-right: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="d-none">
+        <header>
+            <div class="flex">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </div>
+        </header>
+        <div class="container">
+
+            <nav>Nav</nav>
+            <article>Article</article>
+            <aside>Aside</aside>
+
+        </div>
+
+        <footer>
+            Footer
+        </footer>
+    </div> 
+
+    <div class="flex-container">
+
+        <header>
+            Header
+        </header>
+
+        <div class="container">
+            <nav>Nav</nav>
+            <article>
+
+                <form>
+
+                    <div class="flex">
+                        <div class="flex-item">
+
+                            <div class="field">
+                                <label>First Name:</label>
+                                <div>
+                                    <input type="text" name="firstName">
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <label>Last Name:</label>
+                                <input type="text" name="lastName">
+                            </div>
+
+                            <div class="field">
+                                <label>Email:</label>
+                                <input type="email" name="email">
+                            </div>
+
+                        </div>
+
+                        <div class="flex-item">
+                            Proficiency: <br>
+                            <input type="checkbox" name="proficiency">
+                            <label>HTML</label> <br>
+                            <input type="checkbox" name="proficiency">
+                            <label>CSS</label><br>
+                            <input type="checkbox" name="proficiency">
+                            <label>Javascript</label><br>
+
+                        </div>
+                    </div>
+
+                    <div class="btn-container">
+                        <input type="submit" value="Submit" class="submit-btn">
+                    </div>
+
+                </form>
+
+            </article>
+            <aside>Aside</aside>
+        </div>
+        
+        <footer>
+            Footer
+        </footer>
+
+    </div>
+
+</body>
+</html>
