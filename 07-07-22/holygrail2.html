@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+        }
+        .d-flex {
+            display: flex;
+            min-height: 100vh;
+        }
+        .flex-column {
+            display: flex;
+            flex-direction: column;
+            width: 90%;
+        }
+        nav {
+            background-color: darkcyan;
+            width: 10%;
+        }
+        header, 
+        footer {
+            background-color: yellowgreen;
+            height: 20%;
+        }
+        aside {
+            background-color: beige;
+            width: 20%;
+        }
+        article {
+            width: 80%;
+        }
+        main {
+            height: 60%;
+            display: flex;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="d-flex">
+
+        <nav>Nav</nav>
+
+        <div class="flex-column">
+            <header>Header</header>
+            <main>
+                <article>Article</article>
+                <aside>Aside</aside>
+            </main>
+            <footer>Footer</footer>
+        </div>
+
+    </div>
+
+</body>
+</html>
