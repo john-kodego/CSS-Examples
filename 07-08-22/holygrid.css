@@ -1,0 +1,34 @@
+.grid {
+    display: grid;
+    grid-template-columns: 20% 1fr 20%;
+    grid-template-rows: 100px 1fr 100px;
+    height: 100vh;
+    gap: 10px;
+    grid-template-areas: 
+        "header header header" 
+        "nav   article aside"
+        "footer footer footer"
+    ;
+}
+
+header {
+    /* grid-column: 1 / span 3; */
+    background-color: yellowgreen;
+    grid-area: header;
+}
+nav {
+    grid-area: nav;
+    background-color: aquamarine;
+}
+article {
+    grid-area: article;
+    background-color: violet;
+}
+aside {
+    grid-area: aside;
+    background-color: gainsboro;
+}
+footer {
+    grid-area: footer;
+    background-color: yellowgreen;
+}
