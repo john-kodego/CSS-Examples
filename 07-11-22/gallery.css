@@ -1,0 +1,44 @@
+.container {
+    display: flex;
+    gap: 10px 1%;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.wrapper img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+}
+
+.wrapper p {
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+}
+
+@media screen and (max-width:1100px) {
+    .container {
+        flex-wrap: wrap;
+    }
+    .wrapper {
+        width: 49%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .wrapper {
+        width: 100%;
+    }
+    .wrapper p {
+        font-size: 16px;
+    }
+}
