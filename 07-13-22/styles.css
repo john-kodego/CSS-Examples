@@ -1,0 +1,29 @@
+.hover-box {
+    background-image: url(https://images.unsplash.com/photo-1656927959549-45e0c30dce89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80);
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+
+    transition: all ease .2s;
+}
+
+.hover-box:hover {
+    transform: translateY(-20px);
+}
+
+.hover-box .content {
+    min-height: 400px;
+    padding: 40px;
+    color: #fff;
+}
+
+.hover-box .overlay {
+    background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.8) 100%);
+    border-radius: 5px;
+}
+
+@media screen and (max-width:991px) {
+    .hover-box .content {
+        min-height: 0;
+    }
+}
